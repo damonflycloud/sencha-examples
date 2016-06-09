@@ -70,19 +70,19 @@
 
     extPackagesRoot = devMode ? (extDir + '/build') : extDir;
 
-    uxJS =  '/packages/ux/classic/ux' + debugSuffix + '.js';
-    chartsJS =   '/packages/charts/classic/charts' + debugSuffix + '.js';
-    themePackageDir ='/classic-theme/theme-' + themeName + '/';
+    uxJS =  '../../packages/ux/classic/ux' + debugSuffix + '.js';
+    chartsJS =   '../../packages/charts/classic/charts' + debugSuffix + '.js';
+    themePackageDir ='../../classic-theme/theme-' + themeName + '/';
 
     if (includeCSS) {
         loadCss(themePackageDir + 'resources/theme-' + themeName + '-all' + cssSuffix);
-        loadCss(  '/packages/charts/classic/' + themeName + '/resources/charts-all' + cssSuffix);
-        loadCss( '/packages/ux/classic/' + themeName + '/resources/ux-all' + cssSuffix);
+        loadCss(  '../../packages/charts/classic/' + themeName + '/resources/charts-all' + cssSuffix);
+        loadCss( '../../packages/ux/classic/' + themeName + '/resources/ux-all' + cssSuffix);
     }
 
     extPrefix = useDebug ? '/ext' : '/ext-all';
 
-    document.write('<script type="text/javascript" src="' + extDir + extPrefix + rtlSuffix + '.js"></script>');
+    document.write('<script type="text/javascript" src="' + "../../" + extPrefix + rtlSuffix + '.js"></script>');
 
     if (hasOverrides) {
         // since document.write('<script>') does not block execution in IE, we need to
