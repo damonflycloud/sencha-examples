@@ -82,7 +82,7 @@
 
     extPrefix = useDebug ? '/ext' : '/ext-all';
 
-    document.write('<script type="text/javascript" src="' + "/" + extPrefix + rtlSuffix + '.js"></script>');
+    document.write('<script type="text/javascript" src="' + extPrefix + rtlSuffix + '.js"></script>');
 
     if (hasOverrides) {
         // since document.write('<script>') does not block execution in IE, we need to
