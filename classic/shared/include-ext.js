@@ -28,7 +28,7 @@
 
     function loadScript(url, defer) {
         document.write('<script type="text/javascript" src="' + url + '"' +
-                (defer ? ' defer' : '') + '></script>');
+            (defer ? ' defer' : '') + '></script>');
     }
 
     Ext = window.Ext || {};
@@ -44,16 +44,16 @@
         includeCSS = !hasOption('nocss', scriptPath),
         useDebug = hasOption('debug'),
         hasOverrides = !hasOption('nooverrides', scriptPath) && !!{
-            // TODO: remove neptune
-            neptune: 1,
-            triton: 1,
-            classic: 1,
-            gray: 1,
-            triton: 1,
-            'neptune-touch': 1,
-            crisp: 1,
-            'crisp-touch': 1
-        }[themeName],
+                // TODO: remove neptune
+                neptune: 1,
+                triton: 1,
+                classic: 1,
+                gray: 1,
+                triton: 1,
+                'neptune-touch': 1,
+                crisp: 1,
+                'crisp-touch': 1
+            }[themeName],
         i = 4,
         devMode = Ext.devMode,
         extDir = scriptPath,
@@ -70,18 +70,18 @@
 
     extPackagesRoot = devMode ? (extDir + '/build') : extDir;
 
-    uxJS = extPackagesRoot + '/packages/ux/classic/ux' + debugSuffix + '.js';
-    chartsJS = extPackagesRoot + '/packages/charts/classic/charts' + debugSuffix + '.js';
-    themePackageDir = extPackagesRoot + '/classic/theme-' + themeName + '/';
+    uxJS =  '/packages/ux/classic/ux' + debugSuffix + '.js';
+    chartsJS =   '/packages/charts/classic/charts' + debugSuffix + '.js';
+    themePackageDir ='/classic-theme/theme-' + themeName + '/';
 
     if (includeCSS) {
         loadCss(themePackageDir + 'resources/theme-' + themeName + '-all' + cssSuffix);
-        loadCss(extPackagesRoot + '/packages/charts/classic/' + themeName + '/resources/charts-all' + cssSuffix);
-        loadCss(extPackagesRoot + '/packages/ux/classic/' + themeName + '/resources/ux-all' + cssSuffix);
+        loadCss(  '/packages/charts/classic/' + themeName + '/resources/charts-all' + cssSuffix);
+        loadCss( '/packages/ux/classic/' + themeName + '/resources/ux-all' + cssSuffix);
     }
 
     extPrefix = useDebug ? '/ext' : '/ext-all';
-    
+
     document.write('<script type="text/javascript" src="' + extDir + extPrefix + rtlSuffix + '.js"></script>');
 
     if (hasOverrides) {
